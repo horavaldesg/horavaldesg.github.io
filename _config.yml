@@ -2,3 +2,6 @@ name: Horacio Valdes
 title: Horacio Valdes
 plugins:
   - jemoji
+
+  
+theme: jekyll-theme-time-machine
