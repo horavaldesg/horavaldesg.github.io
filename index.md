@@ -1,4 +1,4 @@
 # Hello World!
 
 Hello!!!
-[About Me](./info)
+[About Me](./Info)
