@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="flexCSS.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.typekit.net/kdq8ppw.css">
+	<script src="mobile.js"></script>
+
+	<meta charset="utf-8" />
+	<title>Games</title>
+
+</head>
+<style type="text/css">
+.centerHolder {
+background: var(--box);
+padding: 2rem;
+display: grid;
+grid-gap: 20px;
+grid-template-columns: 1fr 2fr;
+align-items: center;
+justify-items: center;
+}
+.centerHolder p{
+
+width: 80%;
+height: 90%;
+/*max-width: 100%*/
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+
+}
+.flex-container > p{
+ margin: 10px;
+ /*max-width: 100%;*/
+}
+
+
+.flex-container > img {
+  
+  width: 122px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+.boxBackground{
+	/*background-color: rgba(47,43,51,0.8);*/
+	width: 500px;
+}
+</style>
+<script>
+	
+	var images = new Array ("PlayTest1.mp4", "images/walrus.webp", "images/walrus2.webp" );
+var captions = new Array ("VR escape room based on Call of Duty Zombies. Developed using Unity 3D, and Oculus Go. Programmed using C#", "Caption for image two", "Caption for image three","Caption for image four", "Caption for image five");
+
+function whichItem(myClick){
+
+capText.innerHTML = captions[myClick];
+fillMe.src=images[myClick];
+
+}
+	</script>
+
+<body>
+<div class="wrapper">
+
+<header>
+<a href="index.html"><h2>Horacio's Games</h2></a>
+</header>
+<nav class ="main-nav" id="mainNav">
+<ul>
+	<li><a href="index.html">Home</a></li>
+	<li><a href="writings.html">Writings</a></li>
+	<li class = "current"><a href="games.html">Games</a></li>
+	<li><a href="scripts.html">Scripts</a></li>
+	
+</ul>
+<a href="javascript:void(0);" style="font-size:30px; background-color: green; color: white;"class="icon" onclick="checkWin()">&#9776;</a>
+</nav>
+<div class="flex-container" >
+
+<a onclick="whichItem(0)" href="javascript:void(0)"><img width= auto height="122" alt="115" src="115.png"></a><a onclick="whichItem(1)" href="javascript:void(0)"><img width="123" height="123" alt="game1" src="images/man.png"></a><a onclick="whichItem(2)" href="javascript:void(2)"><img width="123" height="123" alt="game2" src="images/flaticon.jpg"></a><a onclick="whichItem(3)" href="javascript:void(0)" ><img width="122" height="122" alt="game3" src="images/funk.jpg"></a><a><img width="123" height="123" alt="game4" src="images/man.png"></a><a><img width="123" height="123" alt="game5" src="images/flaticon.jpg"></a>
+</div>
+<div class="centerHolder">
+<video id="fillMe" alt="image captions" width="540" height="320" id="myVideo" controls><source src="115.mp4" type="video/mp4"></video>
+
+</img>
+<div class="boxBackground">
+<div id="capText" class="caption" class="format">
+Select a thumbnail above for information.
+</div>
+</div>
+</div>
+</div>
+<footer>
+<a href="index.html"> My index page</a><br>
+<a href="https://twitter.com/HoraHoracio">Twitter</a><br>
+<a href="#">hvaldes@quinnipiac.edu</a></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+html{
+color: #009;
+box-sizing: border-box; /* padding won't affect element width */
+
+}
+body{
+font-family: korolev, sans-serif;
+background-color: #ccc;
+margin: 30px 50px;
+line-height: 1.4;
+}
+h2{
+	font-family: korolev, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	/*color: #a9a9a9;*/
+}
+
+header{
+margin-top: 2rem;
+background-color: #6F90A0;
+color: #3C4E57;
+text-align: center;
+}
+
+
+footer{
+
+margin-top: 2rem;
+background-color: #6F90A0;
+color: #3C4E57;
+text-align: center;
+padding: 10px;
+}
+
+footer a{
+color:#B0E5FF;
+}
+
+.wrapper{
+display: grid;
+grid-gap: 20px;
+
+}
+
+.boxes{
+grid-area: boxes;
+ background-color: #FFF522;
+
+    color: #444;
+
+height: 250px;
+
+display: flex;
+
+flex-direction: row;
+
+flex-wrap: wrap;
+
+/* We can put things at the start, end, middle or spaced out */
+
+justify-content: space-evenly; 
+
+align-content: start;
+
+}
+
+.box{
+background-color: #444;
+        color: #fff;
+        border-radius: 5px;
+        margin: 5px;
+        padding: 5px;
+
+}
+
+/*img {
+align-self: flex-end;
+order: 4;
+}
+*/
+ 
+p {
+
+width: 150px;
+height: 150px;
+
+}
+.gameDemoArea{
+/*background-color: red;*/
+display: grid;
+grid-gap: 20px;
+grid-template-areas: 
+'boxes boxes'
+'myVid captions'
+'myVid teamText'
+'process myProcess'
+}
+.captions{
+background-color: green;
+grid-area: captions
+}
+.teamText{
+background-color: green;
+grid-area: teamText;
+}
+.myVid{
+	background-color: red;
+	grid-area: myVid;
+}
+.myProcess{
+background-color: blue;
+grid-area: myProcess;
+
+}

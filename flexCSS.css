@@ -1,0 +1,356 @@
+:root{
+ 	--primary: rgb(34,42,43);
+ 	--pColor: rgb(105,154,177);
+ 	--footerColor: rgb(147,222,173);
+ 	--boxes: rgba(87,117,143,0.5);
+ 	--box: rgba(86,104,108,0.5);
+ 	--gameDemoArea: rgba(86,104,108,1);
+ 	--myProcess: rgba(64,103,152);
+ 	--main:rgb(254,250,151);
+}
+img{
+max-width: 100%; /* keep image inside container */
+
+}
+
+video{
+max-width: 100%;  
+/*keep video inside container but allow to shrink for phone */
+}
+body{
+	/*background: https://www.pinterest.com/pin/720153796641856986/;*/
+	background-image:url("background2.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	font-family: korolev, sans-serif;
+	background-color:black;
+	margin: 30px 50px;
+	line-height: 1.4;
+	margin: 30px 60px;
+	line-height: 1.4;
+}
+html{
+	color: rgb(254,250,151);
+	box-sizing: border-box; /* padding won't affect element width */
+
+}
+
+h2{
+	font-family: korolev, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	/*color: #a9a9a9;*/
+}
+
+header{
+	margin-top: 2rem;
+	background-color:var(--primary);
+	/*background-image:url("boxes.jpg");*/
+	color: var(--pColor);
+	text-align: center;
+}
+
+
+footer{
+	margin-top: 2rem;
+	background-color: var(--pColor);
+	color: var(--primary);
+	text-align: center;
+	padding: 10px;
+}
+
+footer a{
+	color:white;
+}
+footer a:hover{
+	color: var(--primary);
+}
+a{
+	text-decoration: none;
+	color: var(--pColor);
+}
+a:hover{
+	color: white;
+}
+
+.wrapper{
+	display: grid;
+	grid-gap: 20px;
+
+}
+
+.boxes{
+	grid-area: boxes;
+	background-color: var(--boxes);
+
+	color: #444;
+
+	height: 250px;
+
+	display: flex;
+
+	flex-direction: row;
+
+	flex-wrap: wrap;
+
+	/* We can put things at the start, end, middle or spaced out */
+
+	justify-content: space-evenly; 
+
+	align-content: start;
+
+}
+
+.box{
+	background-color: var(--box);
+	color: rgb(254,250,151);
+	border-radius: 5px;
+	margin: 5px;
+	padding: 5px;
+
+}
+
+img {
+align-self: flex-start;
+order: 5;
+}
+
+ 
+p {
+	width: 150px;
+	height: 150px;
+	/*max-width: */
+
+}
+
+.gameDemoArea{
+/*background-color: red;*/
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas: 
+	'boxes boxes'
+	'myVid captions'
+	'myVid teamText'
+	'process myProcess'
+}
+.captions{
+	/*background-image:url("boxes.jpg");*/
+	background-color: var(--gameDemoArea);
+	grid-area: captions
+}
+.teamText{
+		/*background-image:url("boxes.jpg");*/
+
+	background-color: var(--gameDemoArea);
+	grid-area: teamText;
+}
+.myVid{
+
+	/*background-color: red;*/
+	grid-area: myVid;
+}
+.myProcess{
+	background-color: rgba(64,103,152);
+	grid-area: myProcess;
+
+}
+
+.main-nav ul{
+display: grid;
+margin-top: 1px;
+grid-gap: 20px;
+padding: 0;
+list-style: none;
+grid-template-columns: repeat(4, 1fr);
+text-align: center;
+}
+.main-nav a{
+background: var(--box);
+display: block;
+text-decoration: none;
+padding: 0.8rem;
+text-align: center;
+color: var(--pColor);
+text-transform: uppercase;
+
+font-size: 1.1rem;
+box-shadow: var(--shadow);
+}
+.main-nav a:hover{
+background: grey;
+color: white;
+}
+/* tells hamburger icon to be invisible */
+.main-nav .icon{
+display: none;
+}
+.button {
+  border: none;
+  color: var(--pColor);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+	position: absolute;
+	top: 400px;
+	right: 20%;
+	background-color: rgba(255,255,255,0);
+  color: var(--pColor);
+  
+  border: 3px groove #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  border-style: inset;
+  color: white;
+}
+
+.button2 {
+	position: absolute;
+		background-color: rgba(255,255,255,0);
+
+	top: 570px;
+	right: 15%;
+  	color: var(--pColor);
+  	
+  	border: 3px groove #008CBA;
+}
+.button2:hover {
+  background-color: #008CBA;
+  border-style: inset;
+  color: white;
+}	
+
+.button3 {
+	position: absolute;
+	background-color: rgba(255,255,255,0);
+
+	top: 240px;
+	right: 30%;
+  	color: var(--pColor);
+  	border: 3px groove #c47e41;
+}
+
+.button3:hover {
+
+  background-color: #c47e41;
+  border-style: inset;
+  color: white;
+}
+
+.current a{
+	background: grey;
+	color: white;
+
+}
+.aboutMe{
+	background-color: rgba(87,117,143,0.8);
+	position: absolute;
+	top: 240px;
+	/*left: 5%;*/
+	align-self: center;
+  	color: white; 
+  	width: auto;
+  	border: 2px groove #c47e41;
+}
+.aboutMe img{
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  /*width: 300px;*/
+
+
+}
+.heading{
+	text-align: center;
+	width: auto;
+}
+
+@media (max-width: 1000px) { /*makes the hamburger icon show up on small screens to show and hide buttons*/
+
+	.main-nav li {
+    display: none;
+
+  	}
+	
+	.main-nav .icon{
+	display: block;
+	position: absolute;
+    right: 0;
+    top: 0;
+	}
+	
+  .centerHolder{
+  grid-template-columns: 1fr;
+  }
+  .main-nav ul{
+	grid-template-columns: 1fr; /*fill screen with one fraction*/
+	}
+  
+  .main-nav.responsive li {
+ 	display: inline;
+ 	text-align: center;
+    /*background-color: #3AADF1;*/
+  }
+  .button1{
+  	position: relative;
+  	top: 0px;
+	left: 70px;
+  }
+  .button2{
+  	position: relative;
+  	top: 0px;
+	left: 105px;
+  }
+  .button3{
+  	position: relative;
+  	top: 0px;
+	left: 140px;
+  }
+  .buttonPosition{
+	display: grid;
+	margin-top: 1px;
+grid-gap: 10px;
+padding: 0;
+list-style: none;
+grid-template-columns: repeat(4, 1fr);
+text-align: center;
+align-content: center;
+}
+.aboutMe{
+	background-color: rgba(87,117,143,0.8);
+	position: absolute;
+	top: 200px;
+	left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 25%);
+	/*align-content: center;*/
+  	color: white; 
+  	width: 600px;
+  	height: 800px;
+  	border: 2px groove #c47e41;
+}
+.aboutMe p{
+	font-size: 24px;
+  }
+  .aboutMe img{
+  	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  	position: absolute;
+  left: 25%;
+  bottom: 0;
+  }
+}

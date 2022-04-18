@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="flexCSS.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.typekit.net/kdq8ppw.css">
+<script src="mobile.js"></script>
+
+	<meta charset="utf-8" />
+	<title>Writings</title>
+
+</head>
+
+<style type="text/css">
+	.pdf{
+		align-self: center;
+		margin-left: 300px;
+	}
+	.centerHolder p{
+
+width: 80%;
+height: 90%;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.flex-container > video {
+  
+  width: auto;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container > p{
+ margin: 10px;
+}
+object{
+width: 100%;
+height: 600px;;
+}
+.info{
+background: var(--box);
+padding: 2rem;
+display: grid;
+grid-gap: 20px;
+grid-template-columns: repeat(2, 1fr);
+}
+
+</style>
+<script>
+	
+	var writing = new Array("designDoc.pdf","usability.pdf");
+	
+	var blurbs = new Array ("Escape Room 115 design document. Alternate <a href='designDoc.pdf' target='_blank'>link</a>",  "This is a usability playtest analysis about Escape Room 115. Alternate <a href='usability.pdf' target='_blank' >link</a> ");
+	
+	function changePaper(myText){
+	
+	
+	myContent.innerHTML= blurbs[myText];
+	var display = document.getElementById("myPapers");
+	display.data = writing[myText];
+	
+	}
+	
+	
+	</script>
+
+<body>
+<div class="wrapper">
+
+<header>
+<a href="index.html"><h2>Horacio's Games</h2></a>
+</header>
+<nav class ="main-nav" id="mainNav">
+<ul>
+	<li><a href="index.html">Home</a></li>
+	<li class = "current"><a href="writings.html">Writings</a></li>
+	<li><a href="games.html">Games</a></li>
+	<li><a href="scripts.html">Scripts</a></li>
+	
+</ul>
+<a href="javascript:void(0);" style="font-size:30px; background-color: green; color: white;"class="icon" onclick="checkWin()">&#9776;</a>
+</nav>
+<div class="info">
+<!-- <h2> GDD Student: My Writing</h2> -->
+<div>
+Here are examples of my critical writing skills and playtesting analyses <ul>
+
+	<li><a onclick="changePaper(0)" href="javascript:void(0)" >Escape Room 115 Design Document</a></li>
+	<li><a onclick="changePaper(1)" href="javascript:void(0)" > Escape Room 115 Usability Playtest Ananlysis</a></li>
+</ul>
+</div>
+<div>
+<p id="myContent">
+Pdfs will appear in the section below
+</p>
+</div>
+</div><!-- close info class-->
+
+<div class="info">
+<object data="" type="application/pdf" id="myPapers">
+        <p>Alternative text - include a link <a href="resume.pdf">to the PDF!</a></p>
+    </object>
+
+</div>
+<footer>
+<a href="index.html"> My index page</a><br>
+<a href="https://twitter.com/HoraHoracio">Twitter</a><br>
+<a href="#">hvaldes@quinnipiac.edu</a>
+</footer>
+</div>
+</body>
+</html>
