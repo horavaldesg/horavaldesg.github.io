@@ -49,13 +49,16 @@ display: grid;
 grid-gap: 20px;
 grid-template-columns: repeat(2, 1fr);
 }
+p{
+	width: auto;
+}
 
 </style>
 <script>
 	
 	var writing = new Array("numberPad.pdf","winCondition.pdf");
 	
-	var blurbs = new Array ("Script for the number pad in Escape Room 115; coded in C#. Alternate <a href='numberPad.pdf' target='_blank'>link</a>",  "This is the script that handles the win condition for Escape Room 115; coded in C#. Alternate <a href='winCondition.pdf' target='_blank' >link</a> ");
+	var blurbs = new Array ("Script for the number pad in Escape Room 115; coded in C#. This script handled one of the three puzzles for Escape Room 115. Alternate <a href='numberPad.pdf' target='_blank'>link</a>",  "This is the script that handles the win condition for Escape Room 115; coded in C#. This script handled the win condition for Escape Room 115, it checked if all the puzzles were completed in time, and if all were complete it would turn on a light and let the user out of the escape room. Alternate <a href='winCondition.pdf' target='_blank' >link</a> ");
 	
 	function changePaper(myText){
 	
@@ -92,6 +95,7 @@ Here are examples of my critical writing skills and playtesting analyses <ul>
 
 	<li><a onclick="changePaper(0)" href="javascript:void(0)" >Escape Room 115 Passcode Script</a></li>
 	<li><a onclick="changePaper(1)" href="javascript:void(0)" > Escape Room 115 Win Condition Script</a></li>
+	<a href="https://github.com/horavaldesg">Link to my GitHub</a>
 </ul>
 </div>
 <div>
@@ -102,7 +106,7 @@ Pdfs will appear in the section below
 </div><!-- close info class-->
 
 <div class="info">
-<object data="" type="application/pdf" id="myPapers">
+<object data="" type="application/pdf" id="myPapers" >
         <p>Alternative text - include a link <a href="resume.pdf">to the PDF!</a></p>
     </object>
 
